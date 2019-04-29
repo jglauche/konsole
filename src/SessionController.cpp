@@ -1717,7 +1717,8 @@ void SessionController::sessionStateChanged(int state)
         setIcon(*_silenceIcon);
         _keepIconUntilInteraction = true;
     } else if (state == NOTIFYBELL) {
-        setIcon(*_bellIcon);
+        return;
+				setIcon(*_bellIcon);
         _keepIconUntilInteraction = true;
     } else if (state == NOTIFYNORMAL) {
         updateSessionIcon();
